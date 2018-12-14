@@ -1,0 +1,14 @@
+# Environments
+.env
+.venv
+env/
+.idea
+.idea/
+idea/
+.idea/workspace.xml
+idea/workspace.xml
+venv/
+ENV/
+env.bak/
+venv.bak/
+/venv/
