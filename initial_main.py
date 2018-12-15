@@ -9,33 +9,6 @@ def fo_sum(min_value, max_value):
     for i in range(0, 500):
         fo_sum.append(0)
 
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/BHP_Productivity_Deviation.mat')
-    matrix = matlab_data['BHP_Productivity_Deviation']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            if min_value <= vector[j] <= max_value:
-                fo_sum[i] = fo_sum[i] + 1
-
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/BT_Deviation.mat')
-    matrix = matlab_data['BT_Deviation']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            if min_value <= vector[j] <= max_value:
-                fo_sum[i] = fo_sum[i] + 1
-
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/Liquid_Productivity_Deviation.mat')
-    matrix = matlab_data['Liquid_Productivity_Deviation']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            if min_value <= vector[j] <= max_value:
-                fo_sum[i] = fo_sum[i] + 1
-
     matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/NQDS_Data_BHP.mat')
     matrix = matlab_data['NQDS_Data_BHP']
 
@@ -74,15 +47,6 @@ def fo_sum(min_value, max_value):
 
     matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/NQDS_Data_Water_Injection.mat')
     matrix = matlab_data['NQDS_Data_Water_Injection']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            if min_value <= vector[j] <= max_value:
-                fo_sum[i] = fo_sum[i] + 1
-
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/Water_Injection_Productivity_Deviation.mat')
-    matrix = matlab_data['Water_Injection_Productivity_Deviation']
 
     for i in range(0, 500):
         vector = matrix[i, :]
@@ -99,30 +63,6 @@ def mean_values():
     for i in range(0, 500):
         model_values.append([])
 
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/BHP_Productivity_Deviation.mat')
-    matrix = matlab_data['BHP_Productivity_Deviation']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            model_values[i].append(abs(vector[j]))
-
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/BT_Deviation.mat')
-    matrix = matlab_data['BT_Deviation']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            model_values[i].append(abs(vector[j]))
-
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/Liquid_Productivity_Deviation.mat')
-    matrix = matlab_data['Liquid_Productivity_Deviation']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            model_values[i].append(abs(vector[j]))
-
     matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/NQDS_Data_BHP.mat')
     matrix = matlab_data['NQDS_Data_BHP']
 
@@ -157,14 +97,6 @@ def mean_values():
 
     matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/NQDS_Data_Water_Injection.mat')
     matrix = matlab_data['NQDS_Data_Water_Injection']
-
-    for i in range(0, 500):
-        vector = matrix[i, :]
-        for j in range(0, len(vector)):
-            model_values[i].append(abs(vector[j]))
-
-    matlab_data = sio.loadmat('/home/aurea/Documents/MEGA/MEGA/Documento-PosDoctorado/DadosForlan/Initial_Diagnosis/Water_Injection_Productivity_Deviation.mat')
-    matrix = matlab_data['Water_Injection_Productivity_Deviation']
 
     for i in range(0, 500):
         vector = matrix[i, :]
