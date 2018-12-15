@@ -134,18 +134,16 @@ def categorize_sumfo_value(vector):
     ''' 1-excellent, 2-good, 3-regular, 4-bad, 5-really bad'''
     result_values = []
     for i in range(0, len(vector)):
-        if 70 <= vector[i]:
-            result_values.append(1)
-        elif 65 <= vector[i] < 70:
-            result_values.append(2)
+        if 65 <= vector[i]:
+            result_values.append(0)
         elif 60 <= vector[i] < 65:
-            result_values.append(3)
+            result_values.append(1)
         elif 55 <= vector[i] < 60:
-            result_values.append(4)
+            result_values.append(2)
         elif 50 <= vector[i] < 55:
-            result_values.append(5)
+            result_values.append(3)
         else:
-            result_values.append(6)
+            result_values.append(4)
     return result_values
 
 
