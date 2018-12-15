@@ -135,13 +135,13 @@ def categorize_sumfo_value(vector):
     ''' 1-excellent, 2-good, 3-regular, 4-bad, 5-really bad'''
     result_values = []
     for i in range(0, len(vector)):
-        if 65 <= vector[i]:
+        if 70 <= vector[i]:
             result_values.append(0)
-        elif 60 <= vector[i] < 65:
+        elif 65 <= vector[i] < 70:
             result_values.append(1)
-        elif 55 <= vector[i] < 60:
+        elif 60 <= vector[i] < 65:
             result_values.append(2)
-        elif 50 <= vector[i] < 55:
+        elif 55 <= vector[i] < 60:
             result_values.append(3)
         else:
             result_values.append(4)
@@ -151,12 +151,13 @@ def categorize_sumfo_value(vector):
 def main():
     mean_strategy = mean_values()
     print(mean_strategy)
-    fo_sum_strategy = fo_sum(-5, +5)
+    fo_sum_strategy = fo_sum(-10, +10)
     print(fo_sum_strategy)
     categorize_strategy = categorize_mean_value(mean_strategy)
     print(categorize_strategy)
     fo_categorize_strategy = categorize_sumfo_value(fo_sum_strategy)
     print(fo_categorize_strategy)
+
 
 if __name__ == "__main__":
     main()
